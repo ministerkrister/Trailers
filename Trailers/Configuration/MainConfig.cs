@@ -93,6 +93,7 @@ namespace Trailers.Configuration
             txtBoxOnlineVideosYouTubeSeasonSearchString.Text = PluginSettings.OnlineVideosYouTubeSeasonSearchString;
             txtBoxOnlineVideosYouTubeEpisodeSearchString.Text = PluginSettings.OnlineVideosYouTubeEpisodeSearchString;
             txtBoxOnlineVideosYouTubeEpisodeSpecialSearchString.Text = PluginSettings.OnlineVideosYouTubeEpisodeSpecialSearchString;
+            txtBoxOnlineVideosSitesToSearch.Text = PluginSettings.OnlineVideosSitesToSearch;
 
             chkBoxOnlineVideosITunesEnabled.Checked = PluginSettings.OnlineVideosITunesEnabled;
             chkBoxOnlineVideosIMDbEnabled.Checked = PluginSettings.OnlineVideosIMDbEnabled;
@@ -314,6 +315,11 @@ namespace Trailers.Configuration
         {
             PluginSettings.OnlineVideosIMDbEnabled = !PluginSettings.OnlineVideosIMDbEnabled;
         }
+
+        private void txtBoxOnlineVideosSitesToSearch_TextChanged(object sender, EventArgs e)
+        {
+            PluginSettings.OnlineVideosSitesToSearch = txtBoxOnlineVideosSitesToSearch.Text;
+        }
         #endregion
 
         #region Event Handlers (Auto Download Settings)
@@ -434,5 +440,8 @@ namespace Trailers.Configuration
             gbxOnlineVideoSettings.Enabled = PluginSettings.ProviderOnlineVideoSearch;
         }
         #endregion
+
+
+
     }
 }

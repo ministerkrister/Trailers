@@ -54,6 +54,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chkBoxSearchLocalInSubFolder = new System.Windows.Forms.CheckBox();
             this.gbxOnlineVideoSettings = new System.Windows.Forms.GroupBox();
+            this.txtBoxOnlineVideosSitesToSearch = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.txtBoxOnlineVideosYouTubeEpisodeSpecialSearchString = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -114,6 +116,7 @@
             this.panelGeneralSettings = new System.Windows.Forms.Panel();
             this.tabAutoDownload = new System.Windows.Forms.TabPage();
             this.panelAutoDownloadSettings = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.gbxSearchProviders.SuspendLayout();
             this.gbxLocalTrailerSettings.SuspendLayout();
             this.gbxOnlineVideoSettings.SuspendLayout();
@@ -394,6 +397,9 @@
             this.gbxOnlineVideoSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxOnlineVideoSettings.Controls.Add(this.label23);
+            this.gbxOnlineVideoSettings.Controls.Add(this.txtBoxOnlineVideosSitesToSearch);
+            this.gbxOnlineVideoSettings.Controls.Add(this.label22);
             this.gbxOnlineVideoSettings.Controls.Add(this.label21);
             this.gbxOnlineVideoSettings.Controls.Add(this.txtBoxOnlineVideosYouTubeEpisodeSpecialSearchString);
             this.gbxOnlineVideoSettings.Controls.Add(this.label20);
@@ -415,6 +421,25 @@
             this.gbxOnlineVideoSettings.TabIndex = 3;
             this.gbxOnlineVideoSettings.TabStop = false;
             this.gbxOnlineVideoSettings.Text = "Manual Search Settings (OnlineVideos)";
+            // 
+            // txtBoxOnlineVideosSitesToSearch
+            // 
+            this.txtBoxOnlineVideosSitesToSearch.Location = new System.Drawing.Point(16, 313);
+            this.txtBoxOnlineVideosSitesToSearch.Name = "txtBoxOnlineVideosSitesToSearch";
+            this.txtBoxOnlineVideosSitesToSearch.Size = new System.Drawing.Size(405, 20);
+            this.txtBoxOnlineVideosSitesToSearch.TabIndex = 17;
+            this.toolTip.SetToolTip(this.txtBoxOnlineVideosSitesToSearch, "Separate the sites with |");
+            this.txtBoxOnlineVideosSitesToSearch.TextChanged += new System.EventHandler(this.txtBoxOnlineVideosSitesToSearch_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(13, 297);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(452, 13);
+            this.label22.TabIndex = 16;
+            this.label22.Text = "You can also search for movie and serie titles in other OnlineVideos sites. Enter" +
+    " sites to search:";
             // 
             // label21
             // 
@@ -1095,6 +1120,15 @@
             this.panelAutoDownloadSettings.Size = new System.Drawing.Size(565, 549);
             this.panelAutoDownloadSettings.TabIndex = 0;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(13, 336);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(270, 13);
+            this.label23.TabIndex = 18;
+            this.label23.Text = "Separate the sites with | E.g. Netflix|Viaplay.se|Sweflimer";
+            // 
             // MainConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1221,5 +1255,8 @@
         private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.GroupBox gbxLanguage;
         private System.Windows.Forms.CheckBox chkBoxReShowMenuAfterTrailerPlayback;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtBoxOnlineVideosSitesToSearch;
+        private System.Windows.Forms.Label label23;
     }
 }

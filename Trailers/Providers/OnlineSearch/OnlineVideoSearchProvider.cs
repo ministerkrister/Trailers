@@ -71,6 +71,25 @@ namespace Trailers.Providers
                 listItems.Add(listItem);
             }
 
+            if (!string.IsNullOrWhiteSpace(PluginSettings.OnlineVideosSitesToSearch) && !string.IsNullOrEmpty(searchItem.Title) && (searchItem.MediaType == MediaItemType.Movie || searchItem.MediaType == MediaItemType.Show))
+            {
+                string[] sites = PluginSettings.OnlineVideosSitesToSearch.Split('|');
+                foreach (string s in sites)
+                {
+                    string site = s.Trim();
+                    if (!string.IsNullOrEmpty(site))
+                    {
+                        listItem = new GUITrailerListItem();
+                        listItem.Label = site;
+                        listItem.Label2 = Translation.Search;
+                        listItem.URL = string.Format("site:{0}|search:{1}|return:Locked", site, searchItem.Title);
+                        listItem.IsSearchItem = true;
+                        listItem.CurrentMedia = searchItem;
+                        listItems.Add(listItem);
+                    }
+                }
+            }
+
             return listItems;
         }
 
