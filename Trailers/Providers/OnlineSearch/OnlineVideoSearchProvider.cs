@@ -71,7 +71,7 @@ namespace Trailers.Providers
                 listItems.Add(listItem);
             }
 
-            if (!string.IsNullOrWhiteSpace(PluginSettings.OnlineVideosSitesToSearch) && !string.IsNullOrEmpty(searchItem.Title) && (searchItem.MediaType == MediaItemType.Movie || searchItem.MediaType == MediaItemType.Show))
+            if (!string.IsNullOrWhiteSpace(PluginSettings.OnlineVideosSitesToSearch) && !string.IsNullOrEmpty(searchItem.Title))
             {
                 string[] sites = PluginSettings.OnlineVideosSitesToSearch.Split('|');
                 foreach (string s in sites)
